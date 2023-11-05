@@ -1,0 +1,95 @@
+package assign03;
+
+import java.util.Scanner;
+
+public class CARDRIVE {
+	
+	int dailyRun;
+	int costFuel;
+	int avgOfCar;
+	int parking;
+	int tollsPrice;
+	
+	public CARDRIVE() {
+		this(0,0,0,0,0);
+	}
+
+	public CARDRIVE(int dailyRun, int costFuel, int avgOfCar, int parking, int tollsPrice) {
+		
+		this.dailyRun = dailyRun;
+		this.costFuel = costFuel;
+		this.avgOfCar = avgOfCar;
+		this.parking = parking;
+		this.tollsPrice = tollsPrice;
+	}
+
+	public int getDailyRun() {
+		return dailyRun;
+	}
+
+	public void setDailyRun(int dailyRun) {
+		this.dailyRun = dailyRun;
+	}
+
+	public int getCostFuel() {
+		return costFuel;
+	}
+
+	public void setCostFuel(int costFuel) {
+		this.costFuel = costFuel;
+	}
+
+	public int getAvgOfCar() {
+		return avgOfCar;
+	}
+
+	public void setAvgOfCar(int avgOfCar) {
+		this.avgOfCar = avgOfCar;
+	}
+
+	public int getParking() {
+		return parking;
+	}
+
+	public void setParking(int parking) {
+		this.parking = parking;
+	}
+
+	public int getTollsPrice() {
+		return tollsPrice;
+	}
+
+	public void setTollsPrice(int tollsPrice) {
+		this.tollsPrice = tollsPrice;
+	}
+	
+//	public void displayCarDrive() {
+//		System.out.println("");
+//	}
+	
+	public void acceptDetails() {
+		
+		System.out.println("Enter required info :");
+		Scanner sc = new Scanner(System.in);
+		System.out.print("enter daily run ");
+		dailyRun  = sc.nextInt();
+		System.out.print("enter daily fuel requirment ");
+		costFuel  = sc.nextInt();
+		System.out.print("enter daily parking ");
+		parking  = sc.nextInt();
+		System.out.print("enter daily toll price ");
+		tollsPrice  = sc.nextInt();
+	}
+	
+	public void calCulate() {
+		
+		int price;
+		
+		price = (dailyRun/avgOfCar);
+		price = ((price * costFuel) + tollsPrice + parking);
+		
+		System.out.println("You can daily save upto Rs :" + price);
+		
+	}
+}
+	

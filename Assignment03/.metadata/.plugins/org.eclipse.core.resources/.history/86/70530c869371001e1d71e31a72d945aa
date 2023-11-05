@@ -1,0 +1,108 @@
+package assign01;
+
+public class CREDITCALCULATOR {
+	
+	int accountNo ;
+	int pendingBalFromLastMonth;
+	int totalItemChargedThisMonth;
+	int creditsAppliedThisMonth;
+	int allowedCreditLimit;
+	int newBalance = 0;
+	
+	
+	public CREDITCALCULATOR() {
+		this(0,0,0,0,0);
+	}
+
+
+	public CREDITCALCULATOR(int accountNo, int pendingBalFromLastMonth, int totalItemChargedThisMonth,
+			int creditsAppliedThisMonth, int allowedCreditLimit) {
+		super();
+		this.accountNo = accountNo;
+		this.pendingBalFromLastMonth = pendingBalFromLastMonth;
+		this.totalItemChargedThisMonth = totalItemChargedThisMonth;
+		this.creditsAppliedThisMonth = creditsAppliedThisMonth;
+		this.allowedCreditLimit = allowedCreditLimit;
+		
+		
+	}
+
+
+	public int getAccountNo() {
+		return accountNo;
+	}
+
+
+	public void setAccountNo(int accountNo) {
+		this.accountNo = accountNo;
+	}
+
+
+	public int getPendingBalFromLastMonth() {
+		return pendingBalFromLastMonth;
+	}
+
+
+	public void setPendingBalFromLastMonth(int pendingBalFromLastMonth) {
+		this.pendingBalFromLastMonth = pendingBalFromLastMonth;
+	}
+
+
+	public int getTotalItemChargedThisMonth() {
+		return totalItemChargedThisMonth;
+	}
+
+
+	public void setTotalItemChargedThisMonth(int totalItemChargedThisMonth) {
+		this.totalItemChargedThisMonth = totalItemChargedThisMonth;
+	}
+
+
+	public int getCreditsAppliedThisMonth() {
+		return creditsAppliedThisMonth;
+	}
+
+
+	public void setCreditsAppliedThisMonth(int creditsAppliedThisMonth) {
+		this.creditsAppliedThisMonth = creditsAppliedThisMonth;
+	}
+
+
+	public int getAllowedCreditLimit() {
+		return allowedCreditLimit;
+	}
+
+
+	public void setAllowedCreditLimit(int allowedCreditLimit) {
+		this.allowedCreditLimit = allowedCreditLimit;
+	}
+
+
+	public int getNewBalance() {
+		return newBalance;
+	}
+
+
+	public void setNewBalance(int newBalance) {
+		this.newBalance = newBalance;
+	}
+	
+	public void displayAccount() {
+		
+		System.out.println("Account no : "+accountNo);
+		System.out.println("Credit Limit  : "+allowedCreditLimit);
+		System.out.println("Balance Pending   : " +pendingBalFromLastMonth);
+		System.out.println("Item charged This Month  : "+totalItemChargedThisMonth);
+		System.out.println("Credit Apllied this MOnth   : "+creditsAppliedThisMonth);
+		System.out.println("New Balance  : "+newBalance);
+		
+	}
+	
+	public void calNewBal() {
+		
+		int bal = pendingBalFromLastMonth + totalItemChargedThisMonth - creditsAppliedThisMonth ;
+		 this.setNewBalance(bal);
+		 
+	}
+	
+}

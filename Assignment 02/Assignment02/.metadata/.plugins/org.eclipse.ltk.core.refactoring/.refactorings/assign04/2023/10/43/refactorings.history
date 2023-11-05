@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.app.geometry.point2D&apos; to &apos;Point2D&apos;&#x0A;- Original project: &apos;assign04&apos;&#x0A;- Original element: &apos;com.app.geometry.point2D&apos;&#x0A;- Renamed element: &apos;com.app.geometry.Point2D&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;point2D&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.app.geometry{point2D.java[point2D" matchStrategy="1" name="Point2D" qualified="false" references="true" similarDeclarations="false" stamp="1697975446920" textual="false" version="1.0"/>
+</session>
